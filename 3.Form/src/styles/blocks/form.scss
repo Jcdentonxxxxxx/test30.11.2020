@@ -1,0 +1,73 @@
+.form {
+    flex: 1 1 0;
+    min-height: 250px;
+    background: linear-gradient(to right, $litegreen-form, $darkgreen-form);
+    padding: 20px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+    &__header {
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 28px;
+
+        @media #{$mobile-sm} {
+            text-align: center;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__control {
+        width: 65%;
+        padding: 15px 10px 15px 45px;
+        background: #fff;
+        font-size: 15px;
+        color: #333;
+        font-weight: 300;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        border: 2px solid $darkgreen-form;
+        border-radius: 5px;
+
+        &--submit {
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-color: #FCFFAD;
+            background-color: #FCFF00;
+            box-shadow: 0 0 10px 5px #FCFFAD;
+            cursor: pointer;
+            outline: none;
+            margin-bottom: 0;
+
+            &:hover {
+                background-color: darken(#FCFF00, 5%);
+            }
+
+            &:active {
+                box-shadow: none;
+
+            }
+
+
+        }
+
+        @media #{$mobile-sm} {
+            width: 90%;
+            padding: 10px 10px 10px 30px;
+            font-size: 14px;
+        }
+    }
+
+    @media #{$tablet} {
+        order: 3;
+        min-height: auto;
+    }
+
+    @media #{$mobile-sm} {
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 100px;
+
+
+    @media #{$mobile} {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+
+    @media #{$mobile-sm} {
+        padding: 10px;
+    }
+}
