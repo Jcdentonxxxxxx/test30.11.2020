@@ -1,0 +1,33 @@
+.header {
+
+    background-color: $wetAsphalt;
+    color: $white;
+    
+
+    &__inner {
+        position: relative;
+        padding-left:165px;
+
+        @media #{$mobile-sm} {
+            padding-left:100px;
+        }
+    }
+
+
+
+    &__logo {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        position: absolute;
+
+        img {
+            height: 40px;
+            display: block;
+            margin: auto 0;
+        }
+    }
+
+}
+ 

@@ -1,0 +1,61 @@
+@import "~slick-carousel/slick/slick";
+@import '~normalize.css';
+@import "./fonts.scss";
+@import "./vars.scss";
+
+
+body {
+  margin: 0;  
+  font-family: 'RobotoCondensed', sans-serif;  
+  font-size: 15px;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+/* Blocks */
+@import "blocks/container.scss";
+@import "blocks/header.scss";
+@import "blocks/menu.scss";
+@import "blocks/nav.scss";
+@import "blocks/logo.scss";
+@import "blocks/intro.scss";
+@import "blocks/dots.scss";
+@import "blocks/content.scss";
+@import "blocks/top-articles.scss";
+@import "blocks/blockquote.scss";
+
+
+
+
+
+/*Helpers*/
+@import "helpers.scss";

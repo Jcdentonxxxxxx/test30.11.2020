@@ -1,0 +1,41 @@
+.blockquote {
+    margin: 0;
+    background: $white;
+    color: #333334;
+    padding: 20px 10px 20px 50px;
+    position: relative;
+
+    @media #{$mobile-sm} {
+        padding: 20px 10px 20px 28px;
+    }
+
+    &::before {
+        content: "\201C";
+        font-family: serif;
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        color: #BCBCBC;
+        font-size: 70px;
+        
+        @media #{$mobile-sm} {
+                font-size: 40px;
+        }
+    }
+
+    &__text {
+        margin: 0 0 16px;
+        font-size: 20px;
+        letter-spacing: .05em;
+        line-height: 1.4;
+        font-family: 'Playfair Display',
+        serif;
+        font-style: italic;
+
+        @media #{$mobile-sm} {
+            font-size: 14px;
+            line-height: 1.2;
+            margin: 0 0 10px;
+        }
+    }
+}

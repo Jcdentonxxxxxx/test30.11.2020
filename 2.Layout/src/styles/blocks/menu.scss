@@ -1,0 +1,137 @@
+.menu {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 60px;
+
+    &__dropdown {
+        height: 100%;
+        
+
+        &.active {
+            z-index: 1000;
+            position: fixed;
+            display: block;
+            top: 60px;
+            background-color: rgba(#2d2d44, 0.95);
+            right: 0;
+            bottom: 0;
+            left: 0;    
+            padding: 10px;
+            overflow: auto;
+            
+        }
+
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+
+    &__list {
+
+        &--lvl {
+            display: none;
+            position: absolute;
+            background-color: #454560;
+            width: 360px;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+
+            @media #{$tablet} {
+                display: block;
+                position: static;
+                background-color: transparent;
+                width: 100%;
+                padding-left: 35px;
+            }
+        }
+
+        @media #{$tablet} {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+        @media #{$tablet} {
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+    }
+
+    &__item {
+        display: inline-block;
+        position: relative;
+        color: $white;
+
+        &--child {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 48%;
+                right: 10px;
+                display: block;
+                width: 0;
+                height: 0;
+                border-width: 6px 4px 0;
+                border-style: solid;
+                border-color: #8f8f9b transparent transparent;
+
+                @media #{$tablet} {
+                    display: none;
+                }
+            }
+        }
+
+        &:hover {
+            color: $grey;
+            background-color: #454560;
+
+            .menu__list--lvl {
+                display: block;
+            }
+
+            svg {
+                opacity: 1;
+            }
+
+            @media #{$tablet} {
+                background-color:transparent;
+            }
+        }
+
+        @media #{$tablet} {
+            border-bottom: 1px solid #8f8f9b;
+        }
+
+    }
+
+    &__link {
+        display: block;
+        cursor: pointer;
+        padding: 20px 25px;
+        
+
+        &:hover {
+            color: $grey;
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+            opacity: 0.5;
+        }
+
+        @media #{$tablet} {
+            padding: 20px 25px 20px 15px;
+        }
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,43 @@
+.top-articles {
+    float: right;
+    width: 30%;
+    padding: 10px;
+    padding-top: 35px;
+
+    &__title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 105px;
+        padding-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        color: $black;
+        display: block;
+        color: $orange;
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    &__photo {
+        position: absolute;
+        width: 80px;
+        left: 0;
+        top: 0;
+    }
+
+    &__time {
+        display: block;
+        color: $grey;
+    }
+
+    @media #{$tablet} {
+        display: none;
+    }
+}
