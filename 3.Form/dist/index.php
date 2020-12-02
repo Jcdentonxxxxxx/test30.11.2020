@@ -15,11 +15,11 @@
 
 <body>
     <?php
-        $sub1 = 123;
-        $utm_source = 321;
-        $ip = "192.168.1.1";
+    $sub1 = 123;
+    $utm_source = 321;
+    $ip = "192.168.1.1";
     ?>
-    <div class="container">       
+    <div class="container">
 
         <div class="discount">
             <div class="price">
@@ -31,8 +31,8 @@
             <div class="discount__logo"><img src="images/logo.png" alt=""></div>
             <form action="/index.php" method="POST" name="getProduct" class="form">
                 <div class="form__header">Введите ваши данные в форму ниже:</div>
-                <input class="form__control" type="text" name="name" placeholder="Ваше имя" value="">
-                <input class="form__control" type="tel" name="phone" placeholder="Ваш телефон" value="">
+                <input class="form__control" type="text" name="name" placeholder="Ваше имя" value="" required>
+                <input class="form__control" type="tel" name="phone" placeholder="Ваш телефон" value="" required>
                 <input class="form__control form__control--submit" type="submit" name="submit" value="Получить за 149 руб.">
                 <input type="hidden" value="<?php echo $sub1 ?>" name="sub1">
                 <input type="hidden" value="<?php echo $utm_source ?>" name="utm_source">
